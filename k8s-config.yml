@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: toko-buku-config
+  namespace: default
+data:
+  DB_HOST: "localhost"
+  DB_USER: "user"
+  DB_PASSWORD: "password"
+  DB_NAME: "toko_online"

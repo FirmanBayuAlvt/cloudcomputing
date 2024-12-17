@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: toko-buku-online
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: toko-buku-online
+  template:
+    metadata:
+      labels:
+        app: toko-buku-online
+    spec:
+      containers:
+      - name: toko-buku-online
+        image: <DOCKERHUB_USER>/toko_buku_online:latest
+        ports:
+        - containerPort: 3000
